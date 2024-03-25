@@ -1,0 +1,32 @@
+base:
+  subclip_start_seconds: 0
+  subclip_end_seconds: 245
+
+data:
+  input:
+    video: "data/raw/case_ai (1).mp4"
+
+  intermediate:
+    original_audio: "data/raw/original_audio.mp3"
+  
+  output:
+    # Texto transcrito
+    transcribed_text_with_timestamps: "data/output/transcription_with_timestamps.json"
+    transcribed_text: "data/output/transcription_texto.txt"
+    
+    # Texto traduzido
+    translated_text_with_timestamps: "data/output/translation_with_timestamps.json"
+    translated_text: "data/output/translation_text.txt"
+
+    # Áudio traduzido
+    translated_audio: "data/output/translated_audio.wav"
+
+    # Vídeo ccom áudio traduzido
+    voice_over_video: "data/output/voice_over_video.mp4"
+    
+
+model:
+  asr: "openai/whisper-large-v3"
+  translator: "openai"
+  tts: "coqui"
+

@@ -7,11 +7,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+.DS_Store
+
 # C extensions
 *.so
 
 # Raw Data
-data/raw/*
+data/raw/case_ai (1).mp4
+data/raw/original_audio.mp3
+data/raw/original_audio.wav
+data/audio_segments
 
 # Distribution / packaging
 .Python

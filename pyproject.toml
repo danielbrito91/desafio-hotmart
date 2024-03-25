@@ -6,11 +6,25 @@ authors = ["danielbrito91 <danieloliveiradebrito@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python =  ">=3.10,<3.12"
+transformers = "^4.38.2"
+moviepy = "^1.0.3"
+torch = "^2.2.1"
+accelerate = "^0.28.0"
+whisper = "^1.1.10"
+openai = "^1.14.2"
+langchain = "^0.1.13"
+python-dotenv = "^1.0.1"
+gtts = "^2.5.1"
+pydub = "^0.25.1"
+tts = "^0.22.0"
 
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.3"
+ipywidgets = "^8.1.2"
+black = "^24.3.0"
+isort = "^5.13.2"
 
 [build-system]
 requires = ["poetry-core"]
