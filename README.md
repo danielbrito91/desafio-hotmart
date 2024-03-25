@@ -6,15 +6,15 @@ Processamento de vídeo usando ferramentas de IA generativa, passando o áudio d
 
 ## Estrutura do repositório
 
-O repositório apresenta a estrutura sumarizada abaixo. Conforme arquivos requeridos na [descrição da avaliação]("doc/Cópia_de_Avaliação_de_Cientista_de_Dados_(AI_2024)"), destaca-se:
+O repositório apresenta a estrutura sumarizada abaixo. Conforme arquivos requeridos na [descrição da avaliação](https://github.com/danielbrito91/desafio-hotmart/blob/main/doc/C%C3%B3pia_de_Avalia%C3%A7%C3%A3o_de_Cientista_de_Dados_(AI_2024).pdf), destaca-se:
 
 - Código utilizado para gerar as etapas do teste: `main.py` e módulos constantes em `desafio_hotmart/`
 
-- Arquivo de texto com a transcrição em pt-br: [`data/output/transcription_texto.txt`]("data/output/transcription_texto.txt") (texto "corrido") e [`data/output/transcription_with_timestamps.json`]("data/output/transcription_with_timestamps.json") (texto com marcações de tempo)
+- Arquivo de texto com a transcrição em pt-br: [`data/output/transcription_texto.txt`](https://github.com/danielbrito91/desafio-hotmart/blob/main/data/output/transcription_texto.txt) (texto "corrido") e [`data/output/transcription_with_timestamps.json`](https://github.com/danielbrito91/desafio-hotmart/blob/main/data/output/transcription_with_timestamps.json) (texto com marcações de tempo)
 
-- Arquivo de texto com a tradução em inglês: [`data/output/translation_text.txt`]("data/output/translation_text.txt") (texto "corrido") e [`data/output/translation_with_timestamps.json`]("data/output/translation_with_timestamps.json") (texto com marcações de tempo)
+- Arquivo de texto com a tradução em inglês: [`data/output/translation_text.txt`](https://github.com/danielbrito91/desafio-hotmart/blob/main/data/output/translation_text.txt) (texto "corrido") e [`data/output/translation_with_timestamps.json`](https://github.com/danielbrito91/desafio-hotmart/blob/main/data/output/translation_with_timestamps.json) (texto com marcações de tempo)
 
-- Sample de vídeo final com 3-5 minutos: [`data/output/voice_over_video.mp4`](data/output/voice_over_video.mp4).
+- Sample de vídeo final com 3-5 minutos: [`data/output/voice_over_video.mp4`](https://github.com/danielbrito91/desafio-hotmart/blob/main/data/output/voice_over_video.mp4).
 
 ```text
 ├── README.md          <- Informações do projeto e passo-a-passo de como
@@ -74,19 +74,9 @@ Para desenvolvimento do projeto, foram consideradas as seguintes etapas.
 
 Os resultados constam abaixo:
 
-Vídeo original:
+[Vídeo original](data/raw/sample_clip.mp4)
 
-<video width="320" height="240" controls>
-<source src="data/raw/sample_clip.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-Vídeo traduzido:
-
-<video width="320" height="240" controls>
-    <source src="data/output/voice_over_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+[Vídeo traduzido](data/output/voice_over_video.mp4)
 
 ### Processamento do vídeo
 
