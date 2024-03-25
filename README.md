@@ -42,6 +42,14 @@ O repositório apresenta a estrutura sumarizada abaixo. Conforme arquivos requer
 │
 ├── notebooks          <- Jupyter notebooks em formato .ipynb utilizados ao longo do projeto.
 |
+├── Dockerfile         <- Configura imagem docker
+|
+|
+├── .dockerignore      <- Arquivos não considerados para container
+|
+|
+├── compose.yaml       <- Para docker compose
+|
 ├── poetry.lock        <- gerado por Poetry, fixando dependências do projeto.
 |
 ├── pyproject.toml     <- arquivo de configuração com dependências do projeto.
@@ -60,6 +68,26 @@ O repositório apresenta a estrutura sumarizada abaixo. Conforme arquivos requer
 ├── main.py            <- Executa o processo
 │
 └── .gitignore         
+```
+## Como reproduzir
+
+Para executar este projeto, siga as etapas abaixo:
+
+1. Clone o repositório em sua máquina local.
+2. Abra o terminal e navegue até o diretório do projeto.
+3. Persista o vídeo a ser processado em `data/raw/case_ai (1).mp4`.
+4. Crie um arquivo `.env` que possua a chave para API do OpenAI (`OPENAI_API_KEY=sk-...`).
+5. Execute o comando abaixo
+
+```shell
+docker compose build
+docker compose up
+```
+
+Os arquivos persistidos em `data/output` do container podem ser copiados mediante o comando abaixo:
+
+```shell
+docker cp <container_id>:/app/data/output/ <host_directory_path>
 ```
 
 ## Funcionalidades
@@ -130,17 +158,3 @@ O áudio poderia ser avaliado pela métrica qualitativa [Mean Opinion Scores (MO
 
 Finalmente, a inserção do áudio em inglês no vídeo foi realizada utilizando-se também o módulo `desafio_hotmart/video_manipulation.py`.
 
-## Como reproduzir
-
-Para executar este projeto, siga as etapas abaixo:
-
-1. Clone o repositório em sua máquina local. Você deve ter o [Poetry](https://python-poetry.org/) instalado, bem como o [FFmpeg](https://ffmpeg.org/download.html)
-2. Abra o terminal e navegue até o diretório do projeto.
-3. Persista o vídeo a ser processado em `data/raw/case_ai (1).mp4`.
-4. Crie um arquivo `.env` que possua a chave para API do OpenAI (`OPENAI_API_KEY=sk-...`).
-5. Execute o comando abaixo:
-
-```shell
-poetry install
-poetry run python main.py
-```

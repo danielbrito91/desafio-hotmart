@@ -21,7 +21,7 @@ data:
     # Áudio traduzido
     translated_audio: "data/output/translated_audio.wav"
 
-    # Vídeo ccom áudio traduzido
+    # Vídeo com áudio traduzido
     voice_over_video: "data/output/voice_over_video.mp4"
     
 
