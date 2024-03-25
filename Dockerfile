@@ -28,26 +28,19 @@ RUN apt-get install -y ffmpeg
 RUN pip install poetry
 RUN pip install --upgrade pip setuptools wheel
 
-## https://github.com/openai/chatgpt-retrieval-plugin/issues/131
+# https://github.com/openai/chatgpt-retrieval-plugin/issues/131
 RUN apt-get install -y gcc curl
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 SHELL ["bash", "-lc"]
 
 # Disable PEP 517 builds for sudachipy
 RUN pip wheel --no-cache-dir --use-pep517 "sudachipy==0.6.8"
-#https://github.com/huggingface/transformers/issues/2831
+# https://github.com/huggingface/transformers/issues/2831
 RUN pip install transformers
 
 RUN poetry config installer.max-workers 10
-# # https://blog.tzing.tw/posts/rethink-before-installing-poetry-into-docker-94f18935
-# RUN poetry export -f requirements.txt -o requirements.txt
-#RUN pip install requirements.txt --no-cache-dir
+# https://blog.tzing.tw/posts/rethink-before-installing-poetry-into-docker-94f18935
 RUN poetry install --no-interaction --no-ansi --no-dev
 
-# Expose the port that the application listens on.
-# EXPOSE 8000
-
 # Run the application.
-CMD poetry run python main.py
-
-# 
+CMD poetry run python main.py 
